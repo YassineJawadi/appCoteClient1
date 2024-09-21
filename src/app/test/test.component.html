@@ -1,0 +1,12 @@
+<input (input)="onColorChange($event)">
+<input [(ngModel)]="color">
+
+<h1 [style.color]="color">{{titre}}</h1>
+id{{product.id}}
+product {{product.name}}
+quantity{{product.quantity}}
+<button [disabled]="product.quantity <= 0" (click)="acheter()">acheter</button><br>
+<button [hidden]="product.quantity <= 0">save</button><br>
+<img [src]="product.imagesrc" width="128" height="128"> 
+
+

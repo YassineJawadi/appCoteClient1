@@ -1,1 +1,14 @@
-<p>listcategories works!</p>
+<div class="container">
+  <div class="row">
+    <input class="form-control" name="title" [(ngModel)]="titre">
+    <div *ngFor="let element of categories | contains:titre" class="col-md-4" style="margin-bottom: 20px;" >
+      <!--<div *ngIf="element.title.toLowerCase() == titre.toLowerCase() || titre =='' "> -->
+      <img (click)="showDesc(element.description)" [src]="element.image" alt="Grand électroménager"
+           class="img-fluid h-50 w-75" appHighlight>
+      <h3>{{element.title | uppercase}}</h3>
+      <button class="btn btn-primary" *ngIf="element.available; else elseBlock" >Voir produits</button>
+      <ng-template #elseBlock>Categorie non disponible</ng-template>
+      <!--</div>-->
+      </div>
+    </div>
+  </div>

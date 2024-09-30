@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FootersComponent } from './components/footers/footers.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListcategoriesComponent } from './components/listcategories/listcategories.component';
+import { ContainsPipe } from './pipes/contains.pipe';
+import { HighlightDirective } from './highlights/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ListcategoriesComponent } from './components/listcategories/listcategor
     NavbarComponent,
     FootersComponent,
     HomeComponent,
-    ListcategoriesComponent
+    ListcategoriesComponent,
+    ContainsPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

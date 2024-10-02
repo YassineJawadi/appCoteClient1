@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ListcategoriesComponent } from './components/listcategories/listcategories.component';
 import { ContainsPipe } from './pipes/contains.pipe';
 import { HighlightDirective } from './highlights/highlight.directive';
+import {ProductModule} from "./features/product/product.module";
+import {ContactModule} from "./features/contact/contact.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HighlightDirective } from './highlights/highlight.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ProductModule,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]

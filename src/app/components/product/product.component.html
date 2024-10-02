@@ -1,1 +1,13 @@
-<p>product works!</p>
+<div class="container">
+  <div class="row">
+    <input class="form-control" name="title" [(ngModel)]="prix">
+    <div *ngFor="let element of listProducts " class="col-md-4" style="margin-bottom: 20px;" >
+      <div *ngIf="element.price <= prix ">
+      <img  [src]="element.image" [alt]="element.name"
+           class="img-fluid h-50 w-75" appHighlight>
+      <h3>{{element.name | uppercase}}</h3>
+      <button class="btn btn-primary" (click)="like(element)"  >like</button>
+      <h3>{{element.nb_likes}}</h3>
+    </div>
+  </div>
+</div>
